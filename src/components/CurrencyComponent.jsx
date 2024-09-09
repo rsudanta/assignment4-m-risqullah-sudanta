@@ -27,24 +27,29 @@ export default function CurrencyComponent() {
 
     return (
         <>
-            <table className="table table-bordered">
-                <tr className="text-center">
-                    <th></th>
-                    <th>We Buy</th>
-                    <th>Exchange Rate</th>
-                    <th>We Sell</th>
-                </tr>
-                {
-                    Object.keys(currencyData).map((currency) => (
-                        <tr>
-                            <td className="text-center">{currency}</td>
-                            <td className="text-end">{Number(currencyData[currency]) + (Number(currencyData[currency]) * 0.05)}</td>
-                            <td className="text-end">{Number(currencyData[currency])}</td>
-                            <td className="text-end">{Number(currencyData[currency]) - (Number(currencyData[currency]) * 0.05)}</td>
-                        </tr>
-                    ))
-                }
-            </table>
+            <div style={{ margin: 'auto' }}>
+                <table>
+                    <tr className="text-center">
+                        <th></th>
+                        <th>We Buy</th>
+                        <th>Exchange Rate</th>
+                        <th>We Sell</th>
+                    </tr>
+                    {
+                        Object.keys(currencyData).map((currency) => (
+                            <tr>
+                                <td className="text-center">{currency}</td>
+                                <td className="text-end">{Number(currencyData[currency]) + (Number(currencyData[currency]) * 0.05)}</td>
+                                <td className="text-end">{Number(currencyData[currency])}</td>
+                                <td className="text-end">{Number(currencyData[currency]) - (Number(currencyData[currency]) * 0.05)}</td>
+                            </tr>
+                        ))
+                    }
+                </table>
+                <div> <small style={{ color: 'white' }}>*base currency is <b>USD</b> <br />
+                    *As for the API, <a href="https://currencyfreaks.com/" style={{ color: 'white' }}>https://currencyfreaks.com/</a> is used.
+                </small></div>
+            </div>
         </>
     )
 }

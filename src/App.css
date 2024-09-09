@@ -32,7 +32,22 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+table,
+th,
+tr,
+td {
+  border-bottom: solid 1px white;
+  color:white;
+  padding: 8px 12px;
+}
+
+body {
+  height: 100vh;
+  background-color: #FF7F50;
 }
