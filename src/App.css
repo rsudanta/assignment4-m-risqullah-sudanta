@@ -43,8 +43,12 @@ th,
 tr,
 td {
   border-bottom: solid 1px white;
-  color:white;
-  padding: 8px 12px;
+  color: white;
+  padding: 8px 14px;
+}
+
+th {
+  font-size: x-large;
 }
 
 body {
